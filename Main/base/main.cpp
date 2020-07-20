@@ -1,6 +1,16 @@
 #include <iostream>
+#include "Hero.h"
+#include <time.h>
+#include <ctime>
+#include <string>
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+using namespace std;
+
+int main()
+{
+    Hero character;
+
+
+
     return 0;
 }

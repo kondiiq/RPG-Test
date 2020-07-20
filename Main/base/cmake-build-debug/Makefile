@@ -143,6 +143,33 @@ base/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
 .PHONY : base/fast
 
+Hero.o: Hero.cpp.o
+
+.PHONY : Hero.o
+
+# target to build an object file
+Hero.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Hero.cpp.o
+.PHONY : Hero.cpp.o
+
+Hero.i: Hero.cpp.i
+
+.PHONY : Hero.i
+
+# target to preprocess a source file
+Hero.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Hero.cpp.i
+.PHONY : Hero.cpp.i
+
+Hero.s: Hero.cpp.s
+
+.PHONY : Hero.s
+
+# target to generate assembly for a file
+Hero.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Hero.cpp.s
+.PHONY : Hero.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... base"
+	@echo "... Hero.o"
+	@echo "... Hero.i"
+	@echo "... Hero.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
