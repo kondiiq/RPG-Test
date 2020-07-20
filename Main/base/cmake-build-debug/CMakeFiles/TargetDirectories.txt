@@ -1,0 +1,3 @@
+/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir
