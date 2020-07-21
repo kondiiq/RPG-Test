@@ -7,8 +7,8 @@
 
 #include <iostream>
 #include <string>
-#include <time.h>
 #include <ctime>
+
 
 class Hero
 {
@@ -19,10 +19,10 @@ public:
 
    Hero();
     ~Hero();
-    int get_attack();
-    int get_defense();
-    int get_mana();
-    int get_health();
+    int get_attack() const;
+    int get_defense() const;
+    int get_mana() const;
+    int get_health() const;
     int plus_attack();
     int plus_defense();
     int plus_hp();
@@ -30,16 +30,15 @@ public:
     std::string get_name();
     std::string get_sex();
     void get_stats();
-
-
+    void level_up();
 //Private available variables and methods
 
 private:
 
-    unsigned int attack;
-    unsigned int defense;
-    unsigned int mana;
-    unsigned int health_point;
+    unsigned short int attack;
+    unsigned short int defense;
+    unsigned short int mana;
+    unsigned short int health_point;
     std::string  sex;
     std::string name;
 
