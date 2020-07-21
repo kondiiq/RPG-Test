@@ -27,6 +27,8 @@ public:
     int plus_defense();
     int plus_hp();
     int plus_mp();
+    std::string get_name();
+    std::string get_sex();
     void get_stats();
 
 
@@ -34,12 +36,12 @@ public:
 
 private:
 
-    unsigned int* attack;
-    unsigned int* defense;
-    unsigned int* mana;
-    unsigned int* health_point;
-    std::string*  sex;
-    std::string *name;
+    unsigned int attack;
+    unsigned int defense;
+    unsigned int mana;
+    unsigned int health_point;
+    std::string  sex;
+    std::string name;
 
 };
 

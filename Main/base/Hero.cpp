@@ -5,61 +5,34 @@
 
 Hero::Hero()
 {
-    //Declaring extra variable
-
-    std::string first_name, val_sex;
-    unsigned int val_att, val_def, val_mana, val_hp;
-
-    //Values to extra my variables
-
-    val_att = {5};
-    val_def = {5};
-    val_hp = {20};
-    val_mana = {20};
-    val_sex = {'M'};
 
     //Start constructor
 
     std::cout << "Construct Your Protagonist " << std::endl;
     std::cout << "Hello \n Write name of your character :) " << std::endl;
-    std::getline(std::cin,first_name);
+    std::getline(std::cin, name);
 
-    //Allocating variables from Header
+    while(sex.length() > 1 && sex[0] == 'M' or sex[0] == 'm' or sex[0] == 'W' or sex[0] == 'w' )
+    {
+        std::getline(std::cin, sex);
+    }
+    if(sex[0] == 'M' or sex[0] == 'm')
+    {
+        sex = "Male";
+    }
+    else
+    {
+        sex = "Female";
+    }
 
-    name = new std::string;
-    sex = new std::string ;
-    attack = new unsigned int;
-    defense = new unsigned int;
-    mana = new unsigned int;
-    health_point = new unsigned int;
+    attack = {5};
+    defense = {5};
+    mana = {20};
+    health_point = {50};
 
-    //Ptr values is 0
-
-    name = nullptr;
-    attack = nullptr;
-    defense = nullptr;
-    mana = nullptr;
-    health_point = nullptr;
-    sex = nullptr;
-
-    //Ptr values of extra variables
-
-    name = &first_name;
-    attack = &val_att;
-    defense = &val_def;
-    mana = &val_mana;
-    health_point = &val_hp;
-    sex = &val_sex;
 
     //Print statistic of character
-
-    std::cout << "Statistics:\n";
-    std::cout << "Name: " << first_name << std::endl;
-    std::cout << "Sex: " << val_sex << std::endl;
-    std::cout << "Attack : " << val_att << std::endl;
-    std::cout << "Defense : " << val_def << std::endl;
-    std::cout << "HP : " << val_hp << std::endl;
-    std::cout << "MP :" << val_mana << std::endl;
+    get_stats();
 };
 
 Hero::~Hero()
@@ -67,10 +40,67 @@ Hero::~Hero()
     //Deallocating memory
 
     std::cout << "Destroying the object!" << std::endl;
-    delete attack;
-    delete defense;
-    delete health_point;
-    delete mana;
-    delete sex;
-    delete name;
+
 };
+
+int Hero::get_attack()
+{
+    return attack;
+}
+
+int Hero::get_defense()
+{
+    return defense;
+}
+
+int Hero::get_health()
+{
+    return health_point;
+}
+
+int Hero::get_mana()
+{
+    return mana;
+}
+std::string Hero::get_name()
+{
+    return name;
+}
+std::string Hero::get_sex()
+{
+    return sex;
+}
+void Hero::get_stats()
+{
+    std::cout << "Name: " << get_name() << std::endl;
+    std::cout << "Gender: " << get_sex() << std::endl;
+    std::cout << "Stats :\n";
+    std::cout << "Attack: " << get_attack() << std::endl;
+    std::cout << "Defense: " << get_defense() << std::endl;
+    std::cout << "HP: " << get_health() << std::endl;
+    std::cout << "SP(Mana) : " << get_mana() << std::endl;
+}
+
+int Hero::plus_hp()
+{
+    health_point += 20;
+    return health_point;
+}
+
+int Hero::plus_attack()
+{
+    attack += 3;
+    return attack;
+}
+
+int Hero::plus_defense()
+{
+    defense += 3;
+    return defense;
+}
+
+int Hero::plus_mp()
+{
+    mana += 5;
+    return mana;
+}

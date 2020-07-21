@@ -9,6 +9,8 @@ using namespace std;
 int main()
 {
     Hero character;
+    character.plus_hp();
+    character.get_stats();
 
 
 
