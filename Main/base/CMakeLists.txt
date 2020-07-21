@@ -3,4 +3,4 @@ project(base)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(base main.cpp Hero.cpp Hero.h)
+add_executable(base main.cpp Hero.cpp Hero.h Map.cpp Map.h)

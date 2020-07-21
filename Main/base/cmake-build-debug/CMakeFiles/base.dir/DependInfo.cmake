@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kondiiq/Desktop/repo/Main/base/Hero.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/Hero.cpp.o"
+  "/home/kondiiq/Desktop/repo/Main/base/Map.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/Map.cpp.o"
   "/home/kondiiq/Desktop/repo/Main/base/main.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

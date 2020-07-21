@@ -170,6 +170,33 @@ Hero.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Hero.cpp.s
 .PHONY : Hero.cpp.s
 
+Map.o: Map.cpp.o
+
+.PHONY : Map.o
+
+# target to build an object file
+Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Map.cpp.o
+.PHONY : Map.cpp.o
+
+Map.i: Map.cpp.i
+
+.PHONY : Map.i
+
+# target to preprocess a source file
+Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Map.cpp.i
+.PHONY : Map.cpp.i
+
+Map.s: Map.cpp.s
+
+.PHONY : Map.s
+
+# target to generate assembly for a file
+Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Map.cpp.s
+.PHONY : Map.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -209,6 +236,9 @@ help:
 	@echo "... Hero.o"
 	@echo "... Hero.i"
 	@echo "... Hero.s"
+	@echo "... Map.o"
+	@echo "... Map.i"
+	@echo "... Map.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

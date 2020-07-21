@@ -90,6 +90,12 @@
 		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Hero.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Map.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Map.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/main.cpp">
 			<Option target="base"/>
 		</Unit>

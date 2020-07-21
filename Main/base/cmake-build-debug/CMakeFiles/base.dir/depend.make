@@ -4,6 +4,10 @@
 CMakeFiles/base.dir/Hero.cpp.o: ../Hero.cpp
 CMakeFiles/base.dir/Hero.cpp.o: ../Hero.h
 
+CMakeFiles/base.dir/Map.cpp.o: ../Map.cpp
+CMakeFiles/base.dir/Map.cpp.o: ../Map.h
+
 CMakeFiles/base.dir/main.cpp.o: ../Hero.h
+CMakeFiles/base.dir/main.cpp.o: ../Map.h
 CMakeFiles/base.dir/main.cpp.o: ../main.cpp
 

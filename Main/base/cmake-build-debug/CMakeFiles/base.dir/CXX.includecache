@@ -6,24 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/kondiiq/Desktop/repo/Main/base/Hero.cpp
-Hero.h
-/home/kondiiq/Desktop/repo/Main/base/Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Map.cpp
+Map.h
+/home/kondiiq/Desktop/repo/Main/base/Map.h
 
-/home/kondiiq/Desktop/repo/Main/base/Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Map.h
 iostream
--
-string
--
-ctime
--
-
-/home/kondiiq/Desktop/repo/Main/base/main.cpp
-iostream
--
-Hero.h
-/home/kondiiq/Desktop/repo/Main/base/Hero.h
-ctime
 -
 string
 -
