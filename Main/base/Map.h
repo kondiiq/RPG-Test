@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
+
+enum Status {Start, Pause, Stop, None};
 
 struct Mockup
 {
@@ -21,7 +24,6 @@ class Map {
 public:
     Map();
     ~Map();
-    Mockup Mock[100][100];
     int get_protagonist_pos();
     int get_enemy_pos();
     int get_npc_pos();
@@ -33,10 +35,14 @@ public:
     bool is_enemy(int width, int height);
     bool is_npc(int width, int height);
     void is_someone(int width, int height);
+    void random_field();
+
 
 
 
 private:
+    Mockup Field[100][100];
+    Status alert;
     unsigned  int row;
     unsigned  int column;
 

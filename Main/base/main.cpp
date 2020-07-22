@@ -8,10 +8,12 @@ using namespace std;
 
 int main()
 {
+    srand(time(NULL));
     //Hero character;
     //character.level_up();
     Map mak;
-    mak.display();
+
+
 
 
     return 0;
