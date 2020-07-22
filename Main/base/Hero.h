@@ -34,7 +34,8 @@ public:
 //Private available variables and methods
 
 private:
-
+    unsigned int experience;
+    unsigned int needed_exp;
     unsigned short int attack;
     unsigned short int defense;
     unsigned short int mana;

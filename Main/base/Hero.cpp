@@ -7,6 +7,8 @@ Hero::Hero()
 {
 
     //Start constructor
+    experience = 0;
+    needed_exp = 20;
 
     std::cout << "Construct Your Protagonist " << std::endl;
     std::cout << "Hello \n Write name of your character :) " << std::endl;
@@ -17,6 +19,15 @@ Hero::Hero()
 
         if(sex[0] == 'M' || sex[0] == 'm' || sex[0] == 'W' || sex[0] == 'w')
         {
+            gender = 1;
+            if(sex[0] == 'M' || sex[0] == 'm')
+            {
+               sex = "Male";
+            }
+            else
+            {
+                sex = "Female";
+            }
 
         }
         else
@@ -27,11 +38,15 @@ Hero::Hero()
     attack = {5};
     defense = {5};
     mana = {20};
-    health_point = {50};
-
-
-    //Print statistic of character
+    health_point = {0};
     get_stats();
+
+   if(experience == needed_exp)
+   {
+       level_up();
+   }
+   else
+   {}
 };
 
 Hero::~Hero()
@@ -151,6 +166,9 @@ void Hero::level_up()
             choose --;
         }
         get_stats();
+
+        experience = 0;
+        needed_exp *= 2;
     }
 
 
