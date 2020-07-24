@@ -9,9 +9,9 @@
 Map::Map()
 {
     alert = Stop;
-    row = 10;
-    column = 10;
-    loop_false();
+    row = 20;
+    column = 20;
+    map_set_false();
     set_all();
     display();
 }
@@ -27,11 +27,20 @@ void Map::display()
 
             if(is_protagonist(width, height))
                 display += "H";
-            else if(is_enemy(width, height))
+            else
+                display += "-";
+
+            if(is_enemy(width, height))
                 display += "E";
-            else if(is_npc(width, height))
+            else
+                display += "-";
+
+            if(is_npc(width, height))
                 display += "N";
-            else if(is_water(width, height))
+            else
+                display += "-";
+
+            if(is_water(width, height))
                 display += "W";
             else
                 display += "-";
@@ -48,7 +57,7 @@ Map::~Map()
     std::cout << "Object has been destroyed\n";
 }
 
-void Map::loop_false()
+void Map::map_set_false()
 {
     for(size_t width = 0 ; width < row; ++width)
     {
@@ -58,7 +67,6 @@ void Map::loop_false()
             Field[width][height].Enemy = false;
             Field[width][height].NPC = false;
             Field[width][height].Water = false;
-           // std::cout << "X: " << width << "Y: " << height << "\n";
         }
     }
 }
@@ -98,22 +106,25 @@ bool Map::is_water(int width, int height)
 
 void Map::set_water()
 {
-    int width{} , height{};
-    double count {0.1 * (width * column)};
-    int counter = {int(count)};
+    int width, height;
+    double count {0.1 * (get_row() * get_column())};
+    int counter = int(count);
 
-    width = random_row(row);
-    height = random_col(column);
+
 
     Field[0][0].Water = false;
     Field[0][1].Water = false;
     Field[1][0].Water = false;
-    
+    Field[1][1].Water = false;
+
     for(size_t i = 0; i < counter; ++i)
     {
+        width = get_rand_row();
+        height = get_rand_col();
         if(!Field[width][height].Water && !Field[width][height].Protagonist && !Field[width][height].NPC && !Field[width][height].Enemy)
         {
-            Field[width][height].Water;
+            std::cout<<"Row: " << width << "Column: "<< height << std::endl;
+            Field[width][height].Water = true;
         }
         else
             {
@@ -124,18 +135,19 @@ void Map::set_water()
 
 void Map::set_npc()
 {
-    int width{} , height{};
-    unsigned short int npc = {15};
+    int width , height;
+    unsigned short int npc = 15;
 
-    width = random_row(row);
-    height = random_col(column);
+
     Field[0][0].NPC = false;
 
     for(size_t i = 0; i < npc; ++i)
     {
+        width = get_rand_row();
+        height = get_rand_col();
         if(!Field[width][height].Water && !Field[width][height].NPC)
         {
-            Field[width][height].NPC;
+            Field[width][height].NPC = true;
         }
         else
         {
@@ -146,19 +158,20 @@ void Map::set_npc()
 
 void Map::set_enemy()
 {
-    int width{}, height{};
-    double count{0.3 * (width * column)};
+    int width, height;
+    double count = 0.3 * (get_column() * get_row());
     int enemy = int(count);
 
-    width = random_row(row);
-    height = random_col(column);
+
     Field[0][0].Enemy = false;
 
     for (size_t i = 0; i < enemy; ++i)
     {
+        width = get_rand_row();
+        height = get_rand_col();
         if (!Field[width][height].Water && !Field[width][height].NPC && !Field[width][height].Enemy)
         {
-            Field[width][height].Enemy;
+            Field[width][height].Enemy = true;
         }
         else
         {
@@ -172,17 +185,25 @@ void Map::set_all()
     set_water();
     set_npc();
     set_enemy();
-    Field[0][0].Protagonist = true;
+    Field[get_row() - 1][get_column() - 2].Protagonist = true;
 }
 
-int Map::random_col(int col)
+int Map::get_row() const
 {
-    col = rand() % column;
-    return col;
+    return row;
 }
 
-int Map::random_row(int rows)
+int Map::get_column() const
 {
-    rows = rand() % row;
-    return rows;
+    return column;
+}
+
+int Map::get_rand_col() const
+{
+    return std::experimental::randint(0, get_column()) ;
+}
+
+int Map::get_rand_row() const
+{
+   return std::experimental::randint(0, get_row());
 }

@@ -9,10 +9,11 @@ Hero::Hero()
     //Start constructor
     experience = 0;
     needed_exp = 20;
-
+    level = 1;
     std::cout << "Construct Your Protagonist " << std::endl;
     std::cout << "Hello \n Write name of your character :) " << std::endl;
     std::getline(std::cin, name);
+
     for(size_t gender = 0; gender <= 1 ; gender++)
     {
         std::getline(std::cin, sex);
@@ -35,6 +36,7 @@ Hero::Hero()
             gender = 0;
         }
     }
+
     attack = {5};
     defense = {5};
     mana = {20};
@@ -47,15 +49,12 @@ Hero::Hero()
    }
    else
    {}
-};
+}
 
 Hero::~Hero()
 {
-    //Deallocating memory
-
-    std::cout << "Destroying the object!" << std::endl;
-
-};
+    std::cout << "Destroying the Hero" << std::endl;
+}
 
 int Hero::get_attack() const
 {
@@ -90,6 +89,7 @@ void Hero::get_stats()
 {
     std::cout << "Name: " << get_name() << std::endl;
     std::cout << "Gender: " << get_sex() << std::endl;
+    std::cout << "Level: " << get_level() << std::endl;
     std::cout << "Stats :\n";
     std::cout << "Attack: " << get_attack() << std::endl;
     std::cout << "Defense: " << get_defense() << std::endl;
@@ -131,7 +131,7 @@ void Hero::level_up()
 
         std::cin >> choise;
 
-        if( choise > 0 && choise < 10)
+        if( choise > 0 && choise < 5)
         {
             switch(choise)
             {
@@ -169,7 +169,11 @@ void Hero::level_up()
 
         experience = 0;
         needed_exp *= 2;
+        ++ level;
     }
+}
 
-
+int Hero::get_level() const
+{
+    return level;
 }

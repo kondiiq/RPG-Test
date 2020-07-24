@@ -8,8 +8,9 @@ using namespace std;
 
 int main()
 {
-    srand(time(NULL));
+    srand(time(nullptr));
 
     Map mak;
+
     return 0;
 }

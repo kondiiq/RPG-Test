@@ -4,10 +4,12 @@
 
 #ifndef BASE_MAP_H
 #define BASE_MAP_H
+
 #include "Hero.h"
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <experimental/random>
 
 //Var type Status
 
@@ -42,25 +44,26 @@ public:
     void set_npc();
     void set_all();
     void display();
-    void loop_false();
+    void map_set_false();
     bool is_protagonist(int width, int height);
     bool is_enemy(int width, int height);
     bool is_npc(int width, int height);
     bool is_water(int width, int height);
-    int random_row(int rows);
-    int random_col(int col);
-
-
+    int get_row() const;
+    int get_column() const;
+    int get_rand_row() const;
+    int get_rand_col() const;
 
 //Private//
 private:
-    //Private structure , enums
-    Mockup Field[100][100];
+
+    //Private structure , enum
+    Mockup Field[20][20]{};
     Status alert;
 
     //Private variables
-    unsigned  int row;
-    unsigned  int column;
+     int row ;
+     int column;
 
 };
 

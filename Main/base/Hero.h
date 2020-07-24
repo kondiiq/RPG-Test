@@ -19,10 +19,13 @@ public:
 
    Hero();
     ~Hero();
+
+    //Methods
     int get_attack() const;
     int get_defense() const;
     int get_mana() const;
     int get_health() const;
+    int get_level() const;
     int plus_attack();
     int plus_defense();
     int plus_hp();
@@ -31,15 +34,18 @@ public:
     std::string get_sex();
     void get_stats();
     void level_up();
+
 //Private available variables and methods
 
 private:
+    //Variables
     unsigned int experience;
     unsigned int needed_exp;
     unsigned short int attack;
     unsigned short int defense;
     unsigned short int mana;
     unsigned short int health_point;
+    unsigned short int level;
     std::string  sex;
     std::string name;
 
