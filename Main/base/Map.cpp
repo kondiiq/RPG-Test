@@ -10,6 +10,7 @@ Map::Map()
     row = 20;
     column = 20;
     alert = Start;
+    enemy = 0.3 * (row * column);
     map_set_false();
     set_all();
     display();
@@ -134,7 +135,6 @@ void Map::set_npc()
     int width , height;
     unsigned short int npc = 15;
 
-
     Field[0][0].NPC = false;
 
     for(size_t i = 0; i < npc; ++i)
@@ -155,12 +155,12 @@ void Map::set_npc()
 void Map::set_enemy()
 {
     int width, height;
-    double count = 0.3 * (get_column() * get_row());
-    int enemy = int(count);
+
+    int enemies = get_enemies();
 
     Field[0][0].Enemy = false;
 
-    for (size_t i = 0; i < enemy; ++i)
+    for (size_t i = 0; i < enemies; ++i)
     {
         width = get_rand_row();
         height = get_rand_col();
@@ -230,7 +230,69 @@ void Map::move()
     Field[width - 1][height - 1].Protagonist = true;
 }
 
-Status get_status()
+int Map::get_pos_x_hero() const
 {
+    int pos_x {};
+    for(size_t width = 0; width < get_row(); ++width)
+    {
+        for(size_t height = 0; height < get_column(); ++height)
+        {
+            if(Field[width][height].Protagonist)
+                pos_x = width;
+            else
+            {}
+        }
+    }
+    return pos_x;
+}
 
+int Map::get_pos_y_hero() const
+{
+    int pos_y {};
+    for(size_t width = 0; width < get_row(); ++width)
+    {
+        for(size_t height = 0; height < get_column(); ++height)
+        {
+            if(Field[width][height].Protagonist)
+                pos_y = height;
+            else
+            {}
+        }
+    }
+    return pos_y;
+}
+
+bool Map::get_hero_pos(int width, int height)
+{
+    std::cout << "Is trader here ? " << can_i_trade(width, height) << std::endl;
+    std::cout << "Is enemy here ? " << is_enemy(width, height) << std::endl;
+    if(is_enemy(width, height))
+        std::cout << is_fight(width, height);
+    if(can_i_trade(width, height))
+        std::cout << "YOu can trade here !!" << std::endl;
+    if(get_pos_y_hero() == width && get_pos_x_hero() == height)
+        return true;
+    else
+        return false;
+}
+
+int Map::get_enemies()
+{
+    return enemy;
+}
+
+bool Map::is_fight(int width, int height)
+{
+    if(get_hero_pos(width, height) == Field[width][height].Enemy)
+        return true;
+    else
+        return  false;
+}
+
+bool Map::can_i_trade(int width, int height)
+{
+    if(get_hero_pos(width, height) == Field[width][height].NPC)
+        return true;
+    else
+        return false;
 }

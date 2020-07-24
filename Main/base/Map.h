@@ -17,24 +17,6 @@ enum Status {Start, Pause, Stop};
 
 //Structure type Mockup
 
-struct Enemy_pos
-{
-    int pos_x;
-    int pos_y;
-};
-
-struct Hero_pos
-{
-    int pos_x;
-    int pos_y;
-};
-
-struct NPC_pos
-{
-    int pos_x;
-    int pos_y;
-};
-
 struct Mockup
 {
 bool Protagonist;
@@ -71,23 +53,25 @@ public:
     int get_column() const;
     int get_rand_row() const;
     int get_rand_col() const;
-    Hero_pos get_hero_pos();
+    int get_pos_x_hero() const;
+    int get_pos_y_hero() const;
+    bool get_hero_pos(int width, int height) ;
     void move();
+    int get_enemies();
+    bool is_fight(int width, int height);
+    bool can_i_trade(int width, int height);
     Status get_status();
 //Private//
 private:
 
     //Private structure , enum
     Mockup Field[20][20];
-    Hero_pos hero_positioner[20][20];
-    Enemy_pos enemy_pos[20][20];
-    NPC_pos npc_pos[20][20];
     Status alert;
 
     //Private variables
      int row ;
      int column;
-
+     int enemy;
 };
 
 #endif //BASE_MAP_H
