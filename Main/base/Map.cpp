@@ -2,15 +2,14 @@
 // Created by kondiiq on 21.07.2020.
 //
 
-
 #include "Map.h"
-
 
 Map::Map()
 {
     alert = Stop;
     row = 20;
     column = 20;
+    alert = Start;
     map_set_false();
     set_all();
     display();
@@ -95,7 +94,6 @@ bool Map::is_protagonist(int width, int height)
         return false;
 }
 
-
 bool Map::is_water(int width, int height)
 {
     if(Field[width][height].Water)
@@ -109,8 +107,6 @@ void Map::set_water()
     int width, height;
     double count {0.1 * (get_row() * get_column())};
     int counter = int(count);
-
-
 
     Field[0][0].Water = false;
     Field[0][1].Water = false;
@@ -162,7 +158,6 @@ void Map::set_enemy()
     double count = 0.3 * (get_column() * get_row());
     int enemy = int(count);
 
-
     Field[0][0].Enemy = false;
 
     for (size_t i = 0; i < enemy; ++i)
@@ -206,4 +201,36 @@ int Map::get_rand_col() const
 int Map::get_rand_row() const
 {
    return std::experimental::randint(0, get_row());
+}
+
+void Map::move()
+{
+    int width{}, height{};
+
+    std::cout << "Enter target cordinates :\n X";
+    std::cin >> width;
+    std::cout << "\nY : ";
+    std::cin >> height;
+
+    while(width >= get_row() && height >= get_column())
+    {
+        std::cout << "You are out of map ";
+        std::cout << "Enter target cordinates :\n X";
+        std::cin >> width;
+        std::cout << "\nY : ";
+        std::cin >> height;
+    }
+    for(size_t i = 0; i < get_row(); ++i)
+    {
+        for(size_t j = 0; j < get_column(); ++j)
+        {
+            Field[i][j].Protagonist = false;
+        }
+    }
+    Field[width - 1][height - 1].Protagonist = true;
+}
+
+Status get_status()
+{
+
 }

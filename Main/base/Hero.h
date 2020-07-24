@@ -21,6 +21,7 @@ public:
     ~Hero();
 
     //Methods
+
     int get_attack() const;
     int get_defense() const;
     int get_mana() const;
@@ -38,7 +39,9 @@ public:
 //Private available variables and methods
 
 private:
+
     //Variables
+
     unsigned int experience;
     unsigned int needed_exp;
     unsigned short int attack;

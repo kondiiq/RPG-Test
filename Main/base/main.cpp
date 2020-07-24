@@ -9,8 +9,8 @@ using namespace std;
 int main()
 {
     srand(time(nullptr));
-
     Map mak;
-
+    mak.move();
+    mak.display();
     return 0;
 }
