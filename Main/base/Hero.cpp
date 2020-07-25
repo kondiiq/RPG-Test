@@ -173,7 +173,7 @@ void Hero::level_up()
     }
 }
 
-int Hero::get_level() const
+unsigned int Hero::get_level() const
 {
     return level;
 }

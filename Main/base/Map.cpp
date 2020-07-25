@@ -10,7 +10,7 @@ Map::Map()
     row = 20;
     column = 20;
     alert = Start;
-    enemy = 0.3 * (row * column);
+    enemy = int(0.3 * (row * column));
     map_set_false();
     set_all();
     display();
@@ -276,7 +276,7 @@ bool Map::get_hero_pos(int width, int height)
         return false;
 }
 
-int Map::get_enemies()
+int Map::get_enemies() const
 {
     return enemy;
 }

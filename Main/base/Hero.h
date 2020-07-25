@@ -8,9 +8,9 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include "Map.h"
 
-
-class Hero
+class Hero :public Map
 {
 
 // Public available methods
@@ -26,7 +26,7 @@ public:
     int get_defense() const;
     int get_mana() const;
     int get_health() const;
-    int get_level() const;
+    unsigned int get_level() const;
     int plus_attack();
     int plus_defense();
     int plus_hp();

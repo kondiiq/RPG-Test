@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/base.dir/Enemy.cpp.o"
   "CMakeFiles/base.dir/Hero.cpp.o"
   "CMakeFiles/base.dir/Map.cpp.o"
   "CMakeFiles/base.dir/main.cpp.o"

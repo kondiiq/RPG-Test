@@ -4,13 +4,19 @@
 #include <ctime>
 #include <string>
 
+
 using namespace std;
 
 int main()
 {
+    cout << "Start\n";
     srand(time(nullptr));
-    Map mak;
-    mak.move();
-    mak.display();
+    Hero* pioter = new Hero;
+    Map* mak = new Map;
+    mak->move();
+    mak->display();
+
+    delete pioter;
+    delete  mak;
     return 0;
 }

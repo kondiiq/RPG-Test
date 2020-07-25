@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/kondiiq/Desktop/repo/Main/base/Hero.cpp
+Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Hero.h
+
 /home/kondiiq/Desktop/repo/Main/base/Hero.h
 iostream
 -
@@ -28,5 +32,17 @@ string
 ctime
 -
 experimental/random
+-
+
+/home/kondiiq/Desktop/repo/Main/base/main.cpp
+iostream
+-
+Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Hero.h
+Map.h
+/home/kondiiq/Desktop/repo/Main/base/Map.h
+ctime
+-
+string
 -
 

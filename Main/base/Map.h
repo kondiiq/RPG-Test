@@ -57,7 +57,7 @@ public:
     int get_pos_y_hero() const;
     bool get_hero_pos(int width, int height) ;
     void move();
-    int get_enemies();
+    int get_enemies() const;
     bool is_fight(int width, int height);
     bool can_i_trade(int width, int height);
     Status get_status();
@@ -65,7 +65,7 @@ public:
 private:
 
     //Private structure , enum
-    Mockup Field[20][20];
+    Mockup Field[20][20]{};
     Status alert;
 
     //Private variables
