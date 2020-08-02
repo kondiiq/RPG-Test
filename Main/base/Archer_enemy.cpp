@@ -51,3 +51,18 @@ void Archer_enemy::move()
 {
 
 }
+
+bool Archer_enemy::aggression()
+{
+    if(attack - Hero().get_defense() > 0)
+        return true;
+
+    else
+        return false;
+}
+
+int Archer_enemy::get_archer_x_pos() const
+{}
+
+int Archer_enemy::get_archer_y_pos() const
+{}

@@ -23,6 +23,8 @@ public:
     unsigned short int get_lvl() const;
     std::string get_name() const;
     Weapon get_weapon() const;
+    int get_archer_x_pos() const;
+    int get_archer_y_pos() const;
     bool aggression();
     void move();
 
@@ -35,6 +37,5 @@ private:
     Weapon archer_weapon;
 
 };
-
 
 #endif //BASE_ARCHER_ENEMY_H

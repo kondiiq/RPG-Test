@@ -12,20 +12,20 @@ Warior_enemy::Warior_enemy()
     def = level + 4;
     health = 100;
 
-
     std::cout << "Statistics: \n";
     std::cout << " Health: " << get_health() << std::endl;
     std::cout << " Level: " << get_lvl() << std::endl;;
     std::cout << " Name: " << get_name() << std::endl;
     std::cout << " Defense: " << get_def() << std::endl;;
     std::cout << " Attack: " << get_atack() << std::endl;;
-
 }
 
 Warior_enemy::~Warior_enemy()
-{}
+{
+    std::cout << "Object has been destroyed\n";
+}
 
-int Warior_enemy::get_lvl()
+int Warior_enemy::get_lvl() const
 {
     return level;
 }
@@ -57,8 +57,8 @@ void Warior_enemy::move()
 
 bool Warior_enemy::charge()
 {
-    float chance{0};
-    chance = (attack / 2) / Hero().get_defense() * 0.01 ;
+    double chance{0};
+    chance = ((attack / 2) / Hero().get_defense()) * 0.01 ;
 
     if(chance > 0.51)
         return true;
