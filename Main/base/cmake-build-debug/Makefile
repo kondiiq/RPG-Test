@@ -143,6 +143,33 @@ base/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
 .PHONY : base/fast
 
+Archer_enemy.o: Archer_enemy.cpp.o
+
+.PHONY : Archer_enemy.o
+
+# target to build an object file
+Archer_enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Archer_enemy.cpp.o
+.PHONY : Archer_enemy.cpp.o
+
+Archer_enemy.i: Archer_enemy.cpp.i
+
+.PHONY : Archer_enemy.i
+
+# target to preprocess a source file
+Archer_enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Archer_enemy.cpp.i
+.PHONY : Archer_enemy.cpp.i
+
+Archer_enemy.s: Archer_enemy.cpp.s
+
+.PHONY : Archer_enemy.s
+
+# target to generate assembly for a file
+Archer_enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Archer_enemy.cpp.s
+.PHONY : Archer_enemy.cpp.s
+
 Enemy.o: Enemy.cpp.o
 
 .PHONY : Enemy.o
@@ -260,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... base"
+	@echo "... Archer_enemy.o"
+	@echo "... Archer_enemy.i"
+	@echo "... Archer_enemy.s"
 	@echo "... Enemy.o"
 	@echo "... Enemy.i"
 	@echo "... Enemy.s"

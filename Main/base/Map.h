@@ -5,7 +5,7 @@
 #ifndef BASE_MAP_H
 #define BASE_MAP_H
 
-#include "Hero.h"
+
 #include <iostream>
 #include <string>
 #include <ctime>

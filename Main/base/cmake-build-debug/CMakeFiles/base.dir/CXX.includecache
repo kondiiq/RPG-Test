@@ -17,14 +17,10 @@ string
 -
 ctime
 -
-
-/home/kondiiq/Desktop/repo/Main/base/Map.cpp
 Map.h
 /home/kondiiq/Desktop/repo/Main/base/Map.h
 
 /home/kondiiq/Desktop/repo/Main/base/Map.h
-Hero.h
-/home/kondiiq/Desktop/repo/Main/base/Hero.h
 iostream
 -
 string
@@ -32,17 +28,5 @@ string
 ctime
 -
 experimental/random
--
-
-/home/kondiiq/Desktop/repo/Main/base/main.cpp
-iostream
--
-Hero.h
-/home/kondiiq/Desktop/repo/Main/base/Hero.h
-Map.h
-/home/kondiiq/Desktop/repo/Main/base/Map.h
-ctime
--
-string
 -
 

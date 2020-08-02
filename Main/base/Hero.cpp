@@ -4,6 +4,7 @@
 #include "Hero.h"
 
 Hero::Hero()
+:Map(q)
 {
 
     //Start constructor
@@ -37,11 +38,15 @@ Hero::Hero()
         }
     }
 
+    heal = full_strenght;
     attack = {5};
     defense = {5};
     mana = {20};
     health_point = {0};
     get_stats();
+    get_heal();
+
+
 
    if(experience == needed_exp)
    {
@@ -75,12 +80,12 @@ int Hero::get_mana() const
 {
     return mana;
 }
-std::string Hero::get_name()
+std::string Hero::get_name() const
 {
     return name;
 }
 
-std::string Hero::get_sex()
+std::string Hero::get_sex() const
 {
     return sex;
 }
@@ -176,4 +181,9 @@ void Hero::level_up()
 unsigned int Hero::get_level() const
 {
     return level;
+}
+
+Heal Hero::get_heal() const
+{
+    return heal;
 }

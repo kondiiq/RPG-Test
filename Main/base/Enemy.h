@@ -7,32 +7,15 @@
 
 #include <iostream>
 #include <string>
-#include "Map.h"
-#include "Hero.h"
 
-class Enemy : public Map, public Hero
+
+class Enemy
 {
-
-private:
-
-    unsigned short int attack ;
-    unsigned short int defense;
-    unsigned int level;
-    unsigned short int health_point;
-
 public:
-
     Enemy();
-    unsigned int get_position_x();
-    unsigned int get_position_y();
-    virtual unsigned short int get_attack()  = 0;
-    virtual unsigned short int get_defense()  = 0;
-    unsigned int get_level() const;
-    unsigned short int get_hp() const;
-    void attacking();
-    void defensing();
-    void move();
+    ~Enemy();
+    virtual unsigned short int get_atack() const  = 0;
+    virtual unsigned short int get_def() const  = 0;
 };
-
 
 #endif //BASE_ENEMY_H

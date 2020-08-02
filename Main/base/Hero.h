@@ -10,14 +10,20 @@
 #include <ctime>
 #include "Map.h"
 
-class Hero :public Map
+enum Heal
 {
+     full_strenght, hurt, injured, dead
+};
 
+
+class Hero :public Map
+
+{
 // Public available methods
 
 public:
-
-   Hero();
+    Map q;
+    Hero();
     ~Hero();
 
     //Methods
@@ -31,11 +37,11 @@ public:
     int plus_defense();
     int plus_hp();
     int plus_mp();
-    std::string get_name();
-    std::string get_sex();
-    void get_stats();
+    std::string get_name() const;
+    std::string get_sex() const;
+    void get_stats() ;
     void level_up();
-
+    Heal get_heal() const;
 //Private available variables and methods
 
 private:
@@ -49,6 +55,7 @@ private:
     unsigned short int mana;
     unsigned short int health_point;
     unsigned short int level;
+    Heal heal;
     std::string  sex;
     std::string name;
 

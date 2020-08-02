@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/kondiiq/Desktop/repo/Main/base/Archer_enemy.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/Archer_enemy.cpp.o"
   "/home/kondiiq/Desktop/repo/Main/base/Enemy.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/Enemy.cpp.o"
   "/home/kondiiq/Desktop/repo/Main/base/Hero.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/Hero.cpp.o"
   "/home/kondiiq/Desktop/repo/Main/base/Map.cpp" "/home/kondiiq/Desktop/repo/Main/base/cmake-build-debug/CMakeFiles/base.dir/Map.cpp.o"

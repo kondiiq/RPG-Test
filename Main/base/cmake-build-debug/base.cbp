@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Archer_enemy.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Archer_enemy.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Enemy.cpp">
 			<Option target="base"/>
 		</Unit>
