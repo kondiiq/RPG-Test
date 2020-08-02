@@ -251,6 +251,33 @@ Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Map.cpp.s
 .PHONY : Map.cpp.s
 
+Warior_enemy.o: Warior_enemy.cpp.o
+
+.PHONY : Warior_enemy.o
+
+# target to build an object file
+Warior_enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Warior_enemy.cpp.o
+.PHONY : Warior_enemy.cpp.o
+
+Warior_enemy.i: Warior_enemy.cpp.i
+
+.PHONY : Warior_enemy.i
+
+# target to preprocess a source file
+Warior_enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Warior_enemy.cpp.i
+.PHONY : Warior_enemy.cpp.i
+
+Warior_enemy.s: Warior_enemy.cpp.s
+
+.PHONY : Warior_enemy.s
+
+# target to generate assembly for a file
+Warior_enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Warior_enemy.cpp.s
+.PHONY : Warior_enemy.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -299,6 +326,9 @@ help:
 	@echo "... Map.o"
 	@echo "... Map.i"
 	@echo "... Map.s"
+	@echo "... Warior_enemy.o"
+	@echo "... Warior_enemy.i"
+	@echo "... Warior_enemy.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -108,6 +108,12 @@
 		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Map.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Warior_enemy.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/Warior_enemy.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/home/kondiiq/Desktop/repo/Main/base/main.cpp">
 			<Option target="base"/>
 		</Unit>

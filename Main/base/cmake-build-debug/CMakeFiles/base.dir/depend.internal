@@ -17,6 +17,12 @@ CMakeFiles/base.dir/Hero.cpp.o
 CMakeFiles/base.dir/Map.cpp.o
  /home/kondiiq/Desktop/repo/Main/base/Map.cpp
  /home/kondiiq/Desktop/repo/Main/base/Map.h
+CMakeFiles/base.dir/Warior_enemy.cpp.o
+ /home/kondiiq/Desktop/repo/Main/base/Enemy.h
+ /home/kondiiq/Desktop/repo/Main/base/Hero.h
+ /home/kondiiq/Desktop/repo/Main/base/Map.h
+ /home/kondiiq/Desktop/repo/Main/base/Warior_enemy.cpp
+ /home/kondiiq/Desktop/repo/Main/base/Warior_enemy.h
 CMakeFiles/base.dir/main.cpp.o
  /home/kondiiq/Desktop/repo/Main/base/Archer_enemy.h
  /home/kondiiq/Desktop/repo/Main/base/Enemy.h

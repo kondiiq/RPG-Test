@@ -15,6 +15,7 @@ enum Weapon {Bow, Knife, Sword};
 class Archer_enemy : public Enemy{
 
 public:
+
     explicit Archer_enemy();
     ~Archer_enemy();
     unsigned short int get_atack() const override;
