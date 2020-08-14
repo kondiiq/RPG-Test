@@ -6,10 +6,38 @@
 
 #IncludeRegexTransform: 
 
+/home/kondiiq/Desktop/repo/Main/base/Archer_enemy.h
+Enemy.h
+/home/kondiiq/Desktop/repo/Main/base/Enemy.h
+Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Hero.h
+iostream
+-
+string
+-
+
 /home/kondiiq/Desktop/repo/Main/base/Enemy.h
 iostream
 -
 string
+-
+
+/home/kondiiq/Desktop/repo/Main/base/Game.h
+Map.h
+/home/kondiiq/Desktop/repo/Main/base/Map.h
+Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Hero.h
+Warior_enemy.h
+/home/kondiiq/Desktop/repo/Main/base/Warior_enemy.h
+Archer_enemy.h
+/home/kondiiq/Desktop/repo/Main/base/Archer_enemy.h
+iostream
+-
+string
+-
+ctime
+-
+vector
 -
 
 /home/kondiiq/Desktop/repo/Main/base/Hero.h
@@ -32,10 +60,6 @@ ctime
 experimental/random
 -
 
-/home/kondiiq/Desktop/repo/Main/base/Warior_enemy.cpp
-Warior_enemy.h
-/home/kondiiq/Desktop/repo/Main/base/Warior_enemy.h
-
 /home/kondiiq/Desktop/repo/Main/base/Warior_enemy.h
 Enemy.h
 /home/kondiiq/Desktop/repo/Main/base/Enemy.h
@@ -49,4 +73,22 @@ ctime
 -
 string
 -
+
+/home/kondiiq/Desktop/repo/Main/base/main.cpp
+iostream
+-
+Hero.h
+/home/kondiiq/Desktop/repo/Main/base/Hero.h
+Map.h
+/home/kondiiq/Desktop/repo/Main/base/Map.h
+ctime
+-
+string
+-
+Archer_enemy.h
+/home/kondiiq/Desktop/repo/Main/base/Archer_enemy.h
+Warior_enemy.h
+/home/kondiiq/Desktop/repo/Main/base/Warior_enemy.h
+Game.h
+/home/kondiiq/Desktop/repo/Main/base/Game.h
 

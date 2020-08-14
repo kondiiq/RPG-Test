@@ -62,9 +62,7 @@ bool Archer_enemy::aggression()
 }
 
 int Archer_enemy::get_archer_x_pos() const
-{
-
-}
+{}
 
 int Archer_enemy::get_archer_y_pos() const
 {}

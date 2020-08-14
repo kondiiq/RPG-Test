@@ -6,7 +6,7 @@
 
 Map::Map()
 {
-    alert = Stop;
+    alert = Pause;
     row = 20;
     column = 20;
     alert = Start;
@@ -14,6 +14,7 @@ Map::Map()
     map_set_false();
     set_all();
     display();
+    alert = Start;
 }
 
 void Map::display()

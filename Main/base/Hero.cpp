@@ -187,3 +187,4 @@ Heal Hero::get_heal() const
 {
     return heal;
 }
+

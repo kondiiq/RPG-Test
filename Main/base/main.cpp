@@ -5,7 +5,7 @@
 #include <string>
 #include "Archer_enemy.h"
 #include "Warior_enemy.h"
-
+#include "Game.h"
 
 using namespace std;
 
@@ -19,9 +19,13 @@ int main()
     Map* mak = new Map;
     Archer_enemy* windu = new Archer_enemy;
     Warior_enemy* cody = new Warior_enemy;
+    Game plejka(*mak, *pioter);
+
+
+
 
     mak->move();
-    mak->display();
+
 
     delete pioter;
     delete  mak;
