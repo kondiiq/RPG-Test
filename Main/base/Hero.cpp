@@ -24,23 +24,33 @@ Hero::Hero()
 
     std::getline(std::cin, sex);
 
-    while(sex == "M" || sex == "m" || sex == "W" || sex == "w" || sex == "f" || sex == "F")
+    while(sex == "M" || sex == "F")
     {
-        if(sex == "M" || sex == "m")
+        for(char i : sex)
         {
-            sex = "Male";
-        }
-        else
-        {
-            sex = "Female";
+            if(i == 'M' || i == 'm')
+            {
+                sex = "M";
+            }
+
+            else if (i == 'f' || i == 'w' || i == 'W' || i == 'F')
+            {
+                sex = "F";
+            }
+
         }
     }
 
+   if(sex == "M")
+       sex = "Male";
+
+   else
+       sex = "Female";
    heal = full_strenght;
    attack = {5};
    defense = {5};
    mana = {20};
-   health_point = {0};
+   health_point = {100};
    get_stats();
    get_heal();
 
