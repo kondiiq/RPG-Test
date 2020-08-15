@@ -4,49 +4,45 @@
 #include "Hero.h"
 
 Hero::Hero()
-:Map(q)
+
 {
+    std::string first;
 
     //Start constructor
+    name = {};
     experience = 0;
     needed_exp = 20;
     level = 1;
     std::cout << "Construct Your Protagonist " << std::endl;
     std::cout << "Hello \n Write name of your character :) " << std::endl;
-    std::getline(std::cin, name);
 
-    for(size_t gender = 0; gender <= 1 ; gender++)
+    std::getline(std::cin, first);
+    name = first;
+    std::cout << get_name() << std::endl;
+
+    std::cout << "Enter your sex\n 'W' 'w' 'F' 'f' -> Female\n 'M' 'm' -> Male\n";
+
+    std::getline(std::cin, sex);
+
+    while(sex == "M" || sex == "m" || sex == "W" || sex == "w" || sex == "f" || sex == "F")
     {
-        std::getline(std::cin, sex);
-
-        if(sex[0] == 'M' || sex[0] == 'm' || sex[0] == 'W' || sex[0] == 'w')
+        if(sex == "M" || sex == "m")
         {
-            gender = 1;
-            if(sex[0] == 'M' || sex[0] == 'm')
-            {
-               sex = "Male";
-            }
-            else
-            {
-                sex = "Female";
-            }
-
+            sex = "Male";
         }
         else
         {
-            gender = 0;
+            sex = "Female";
         }
     }
 
-    heal = full_strenght;
-    attack = {5};
-    defense = {5};
-    mana = {20};
-    health_point = {0};
-    get_stats();
-    get_heal();
-
-
+   heal = full_strenght;
+   attack = {5};
+   defense = {5};
+   mana = {20};
+   health_point = {0};
+   get_stats();
+   get_heal();
 
    if(experience == needed_exp)
    {

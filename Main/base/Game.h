@@ -15,17 +15,11 @@
 #include<vector>
 
 
-class Game : public Map, public Hero, public Warior_enemy, public Archer_enemy
+class Game :public Map, public Hero
 {
-
 public:
 
-    Map *map = new Map;
-    Hero *hero = new Hero;
-    Warior_enemy *warrior = new Warior_enemy;
-    Archer_enemy *archer = new Archer_enemy;
-
-    Game(Map *map, Hero *hero);
+    Game(Map &map, Hero &hero);
     ~Game();
     void play();
 

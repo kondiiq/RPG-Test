@@ -15,22 +15,19 @@ int main()
 
     cout << "Start\n";
     srand(time(nullptr));
-    Hero* pioter = new Hero;
-    Map* mak = new Map;
-    Archer_enemy* windu = new Archer_enemy;
-    Warior_enemy* cody = new Warior_enemy;
-    Game plejka(*mak, *pioter);
 
+    Hero *pioter = new Hero;
+//    Map *mak = new Map;
 
-
-
-    mak->move();
-
+//    auto * windu = new Archer_enemy;
+//    auto * cody = new Warior_enemy;
+//    Game game(Map &mak, Hero &pioter);
 
     delete pioter;
-    delete  mak;
-    delete  windu;
-    delete cody;
+//    delete  windu;
+//    delete cody;
+//    delete mak;
+
 
     return 0;
 }

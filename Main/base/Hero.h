@@ -16,13 +16,12 @@ enum Heal
 };
 
 
-class Hero :public Map
+class Hero
 
 {
 // Public available methods
 
 public:
-    Map q;
     Hero();
     ~Hero();
 
@@ -56,7 +55,7 @@ private:
     unsigned short int health_point;
     unsigned short int level;
     Heal heal;
-    std::string  sex;
+    std::string sex;
     std::string name;
 
 };
